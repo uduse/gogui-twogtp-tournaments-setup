@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-../KataGo/cpp/katago gtp -config <(cat base.cfg mmcts_extra.cfg)
+../KataGo/cpp/katago gtp -config <(cat base.cfg mmcts_extra.cfg) -override-config logFile="mmcts.log"
