@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-katago gtp -config base.cfg -override-config logFile="orig.log"
+katago gtp -model model.bin.gz -config base.cfg -override-config logFile="orig.log"
