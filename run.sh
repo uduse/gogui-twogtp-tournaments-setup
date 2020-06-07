@@ -5,7 +5,7 @@
 : ${NUM_THREADS:=10}
 : ${BOARD_SIZE:=9}
 
-NOW=$(date +"%T")
+NOW=$(date +'%m-%d_%H:%M:%S')
 echo 'NUM_THREADS:' $NUM_THREADS
 echo 'NUM_GAMES:' $NUM_GAMES
 time gogui-twogtp -black $BLACK -white $WHITE -size $BOARD_SIZE -verbose -threads $NUM_THREADS -alternate -games ${NUM_GAMES} -auto -sgffile result-${NOW} 2>&1 | gnomon
