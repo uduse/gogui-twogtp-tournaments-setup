@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# set -e
-rm result-*
-rm *.log
+rm -f result-*
+rm -f *.log
 ringmaster gomill.ctl reset
