@@ -6,4 +6,4 @@
 echo 'NUM_GAMES:' $NUM_GAMES
 echo 'NUM_THREADS:' $NUM_THREADS
 
-ringmaster <(cat gomill.ctl | sed "s/NUM_GAMES/${NUM_GAMES}/g" ) run -j ${NUM_THREADS}
+ringmaster <(cat gomill.ctl | sed "s/number_of_games=10/number_of_games=${NUM_GAMES}/g" ) run -j ${NUM_THREADS}

@@ -12,5 +12,5 @@ board_size = 9
 komi = 5.5
 
 matchups = [
-    Matchup('mmcts', 'orig', scorer='players', number_of_games=NUM_GAMES, alternating=True),
+    Matchup('mmcts', 'orig', scorer='players', number_of_games=10, alternating=True),
 ]
