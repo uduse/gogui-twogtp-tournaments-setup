@@ -6,6 +6,5 @@
 echo 'NUM_GAMES:' $NUM_GAMES
 echo 'NUM_THREADS:' $NUM_THREADS
 
-cat gomill.ctl | sed "s/number_of_games=10/number_of_games=${NUM_GAMES}/g" | sed "s/board_size = 9/board_size = ${BOARD_SIZE}/g" > .tmp.ctl
-ringmaster .tmp.ctl run -j ${NUM_THREADS}
-rm -f .tmp.ctl
+cat gomill_default.ctl | sed "s/number_of_games=10/number_of_games=${NUM_GAMES}/g" | sed "s/board_size = 9/board_size = ${BOARD_SIZE}/g" > gomill.ctl
+ringmaster gomill.ctl run -j ${NUM_THREADS}
